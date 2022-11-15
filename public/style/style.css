@@ -1,6 +1,16 @@
 @font-face {
-    font-family: Poppins ExtraBold;
+    font-family: "Poppins ExtraBold";
     src: url(Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins Regular";
+    src: url(Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins SemiBold";
+    src: url(Poppins-SemiBold.ttf);
 }
 
 *,
@@ -66,7 +76,7 @@ nav ul li a{
 }
 
 .btn-nav:hover {
-  background-color: #004369;
+  background-color: #47468d;
 }
 
 .btn-nav:focus,
@@ -103,7 +113,7 @@ nav li a:hover::after{
 }
 
 highlight{
-    color: #E8A44F;
+    color: #E8A44F !important;
 }
 
 .landing-page{
@@ -122,7 +132,7 @@ highlight{
 
 .container-slogan, .container-box{
     width: 100%;
-    margin: 3rem 20rem 0 19rem;
+    margin: 3rem 24rem 0 21rem;
 }
 
 .container-slogan{
@@ -133,17 +143,27 @@ highlight{
 
 .slogan{
     font-size: 2.7vw;
-    width: 150%;
+    width: 300%;
 }
 
 
 .container-box{
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     height: 70vh;
-    margin-left: 3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
     margin-bottom: 9rem;
     width: 100%;
     -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.44); 
     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.44);
     border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-box{
+    font-size: 1.3vw;
+    font-family: "Poppins SemiBold";
 }
