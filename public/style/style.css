@@ -1,3 +1,4 @@
+/* FONTES DE TEXTO IMPORTADAS */
 @font-face {
     font-family: "Poppins ExtraBold";
     src: url(Poppins-ExtraBold.ttf);
@@ -13,6 +14,20 @@
     src: url(Poppins-SemiBold.ttf);
 }
 
+/* PALETAS DE CORES */
+:root {
+  --white-background: #FFFFFF;
+  --nav-bar-color: #00031b75;
+  --transparent: #FFFFFF00;
+  --main-text: #262626;
+  --blue-solar: #6464FB;
+  --golden-solar: #E8A44F;
+  --secondary-blue-solar: #5757ce;
+  --input-bg-color: #F1F1F1;
+  --placeholder: #C4CAE0;
+}
+
+/* ESTILIZAÇÃO GLOBAL */
 *,
 *::before,
 *::after{
@@ -21,23 +36,37 @@
     box-sizing: border-box;
 }
 
+::selection{
+    background-color: #6464fb7c;
+}
+
+/* ESTILIZAÇÃO DO BODY */
 body{
     margin: 0;
     padding: 0;
     width: 100%;
     min-height: 100%;
-    background-color: #fff;
+    background-color: var(-white-background);
 }
 
+/* ESTILIZAÇÃO DA NAVBAR */
 nav{
     display: inline-flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height: 7rem;
-    background-color: #6464FB00;
+    height: 6rem;
+    background: rgba( 0, 3, 27, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     font-family: Poppins ExtraBold;
     width: 100%;
     position: fixed;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 nav .logo img{
@@ -59,32 +88,8 @@ nav ul li a{
     text-decoration: none;
     font-size: 1.3em;
     text-transform: capitalize;
-    color: #fff;
+    color: var(--white-background);
 }
-
-.btn-nav {
-  background-color: #6464FB;
-  color: #fff;
-  transition: background-color 1s;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2em;
-  letter-spacing: 1px;
-  cursor: pointer;
-  border: none;
-  font-family: Poppins ExtraBold;
-}
-
-.btn-nav:hover {
-  background-color: #47468d;
-}
-
-.btn-nav:focus,
-.btn-nav:active {
-  background-color: black;
-  transition: none;
-}
-
 
 nav li a{
     position: relative;
@@ -96,7 +101,7 @@ nav li a{
 nav li a::after{
     content: '';
     position: absolute;
-    background-color: #6464FB;
+    background-color: var(--white-background);
     height: 3px;
     width: 0;
     left: 0;
@@ -112,58 +117,216 @@ nav li a:hover::after{
     margin: 0 1.6rem 0 0;
 }
 
-highlight{
-    color: #E8A44F !important;
+/* BOTÃO DE LOGIN NAVBAR */
+.btn {
+  background-color: var(--blue-solar);
+  color: var(--white-background);
+  transition: background-color 1s;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  font-family: Poppins ExtraBold;
 }
 
-.landing-page{
-    background-image: url(../img/bg-solar-panel.png);
+.btn:hover {
+  background-color: var(--secondary-blue-solar);
+}
+
+.btn:focus,
+.btn:active {
+    background-color: var(--secondary-blue-solar);
+    transition: none;
+}
+
+/* DESTAQUE DE TEXTO */
+highlight{
+    color: var(--golden-solar) !important; 
+}
+
+::placeholder{
+    color: var(--placeholder);
+}
+
+/* ESTILIZAÇÃO HOME PAGE*/
+/* SESSÃO HERO */
+.hero{
     width: 100%;
-    height: fit-content;
+    height: 55rem;
+    background-image: url(../img/bg-solar-panel.png);
+    display: flex;
     background-size: 100% 100%;
 }
 
-.container-land{
-    width: 100%;
-    padding-top: 8rem;
+.rightSide, .leftSide{
+    margin-top: 3rem;
+    width: 50%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.container-slogan, .container-box{
-    width: 100%;
-    margin: 3rem 24rem 0 21rem;
-}
-
-.container-slogan{
-    font-family: "Poppins ExtraBold";
-    color: #fff;
-    margin-top: 16rem;
-}
-
-.slogan{
+.heroText{
+    font-family: Poppins ExtraBold;
     font-size: 2.7vw;
-    width: 300%;
+    color: var(--white-background);
+    width: 63%;
 }
 
-
-.container-box{
+/* CADASTRO */
+.cad{
+    width: 63%;
+    height: 83%;
+    background-color: var(--white-background);
+    border-radius: 20px;
     display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    height: 70vh;
-    padding-left: 8rem;
-    padding-right: 8rem;
-    margin-bottom: 9rem;
-    width: 100%;
-    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.44); 
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.44);
-    border-radius: 30px;
     justify-content: center;
     align-items: center;
 }
 
-#title-box{
+.cadContent{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cadTitle{
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 1.7vw;
+    color: var(--main-text);
+    margin-bottom: 3rem;
+    width: 100%;
+    text-align: center;
+}
+
+.cadForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadLabel, .cadLogin{
+    font-family: Poppins;
     font-size: 1.3vw;
-    font-family: "Poppins SemiBold";
+    color: var(--main-text);
+    align-self: flex-start;
+}
+
+.cadInput{
+    height: 2.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--input-bg-color);
+    font-family: Poppins;
+    font-size: 1vw;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.cadLogin{
+    font-size: 1vw;
+    text-align: center;
+    width: 100%;
+}
+
+.login{
+    text-decoration: underline;
+    color: var(--main-text) !important;
+}
+
+#btn-cad{
+    width: 85%;
+    height: 4rem;
+    margin-top: 2.5rem;
+    font-size: 1.4vw
+}
+
+/* SECTION 2 */
+.section-2{
+    height: 50rem;
+    width: 100%;
+}
+
+.topSide, .bottomSide{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.topSide{
+    height: 20%;
+    justify-content: center;
+}
+
+.bottomSide{
+    height: 80%;
+    justify-content: space-around;
+}
+
+.title{
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 2.5vw;
+    color: var(--main-text);
+}
+
+/* CARDS */
+
+.home-card{
+    display: inline-block;
+    height: 35rem;
+    width: 25%;
+    background-color: var(--input-bg-color);
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.2);
+}
+
+.card-title{
+    font-family: Poppins SemiBold;
+    font-size: 2.1vw;
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 75%;
+}
+
+.card-text{
+    font-family: Poppins Regular;
+    font-size: 1.05vw;
+    text-align: center;
+    margin-bottom: 3rem;
+    width: 75%;
+}
+
+.cardContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-image{
+    margin-bottom: 3rem
+}
+
+.card-check{
+    justify-self: flex-start;
+    align-self: flex-end;
+    margin-top: 2rem;
+    margin-right: 1.5rem;
 }

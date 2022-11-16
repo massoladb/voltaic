@@ -17,7 +17,7 @@
                 <li><a href="#">Página inicial</a></li>
                 <li><a href="#">Solicite agora</a></li>
                 <li><a href="#">Artigos</a></li>
-                <button class="btn-nav">Entrar</button>
+                <button class="btn">Entrar</button>
             </ul>
         </div>
     </nav>
