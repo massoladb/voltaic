@@ -1,2 +1,2 @@
-<h1 style="font-family:Poppins;font-weight:bold;color:#262626;font-size:3rem;">Voltaic Technology</h1>
-<p style="font-family:Poppins;color:#262626;font-size:1.5rem;">Esse é um projeto de TCC apresentado à Etec Drª Ruth Cardoso, que visa estabelecer uma conexão entre o usuário que deseja instalar ou fazer a manutenção de um sistema de energia renovável em sua residência, fábrica ou empresa.</p>
+## Voltaic Technology
+Esse é um projeto de TCC apresentado à Etec Drª Ruth Cardoso, que visa estabelecer uma conexão entre o usuário que deseja instalar ou fazer a manutenção de um sistema de energia renovável em sua residência, fábrica ou empresa.
