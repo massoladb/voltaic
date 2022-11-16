@@ -1,6 +1,6 @@
 @extends('layouts.master_page')
 
-@section('titulo', 'Voltaic')
+@section('titulo', 'Bem-vindo à Voltaic')
 
 @section('conteudo')
     <section class="hero">
