@@ -11,7 +11,7 @@
             <div class="cad">
                 <div class="cadContent">
                     <h2 class="cadTitle">Cadastre-se e <highlight>realize uma solicitação</highlight> quando quiser!</h2>
-                    <form action="#" method="_POST" class="cadForm">
+                    <form action="/cadastro" method="_POST" class="cadForm">
                         <label class="cadLabel">Email</label><br>
                         <input type="email" placeholder="voltaic@email.com" name="email" class="cadInput">
                         <label class="cadLabel">Senha</label><br>
@@ -69,7 +69,9 @@
                 <div class="aboutUs-text">Somos uma equipe de TCC do curso técnico em Desenvolvimento de Sistemas na Etec Drª Ruth Cardoso, composta por Bruno Santana, Felipe Massola, João Gabriel, José Felipe e Kattryel Rezende orientados pelos professores Charles Barros e Daniela Uebele.</div>
             </div>
             <div class="rightSide">
-                <div class="abtPic"></div>
+                <div class="abtPic">
+
+                </div>
             </div>
         </div>
     </section>
