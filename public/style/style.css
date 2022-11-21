@@ -1,17 +1,17 @@
 /* FONTES DE TEXTO IMPORTADAS */
 @font-face {
     font-family: "Poppins ExtraBold";
-    src: url(Poppins-ExtraBold.ttf);
+    src: url(/fonts/Poppins-ExtraBold.ttf);
 }
 
 @font-face {
     font-family: "Poppins Regular";
-    src: url(Poppins-Regular.ttf);
+    src: url(/fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
     font-family: "Poppins SemiBold";
-    src: url(Poppins-SemiBold.ttf);
+    src: url(/fonts/Poppins-SemiBold.ttf);
 }
 
 /* PALETAS DE CORES */
@@ -31,18 +31,18 @@
 /* ESTILIZAÇÃO GLOBAL */
 *,
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-::selection{
+::selection {
     background-color: #6464fb7c;
 }
 
 /* ESTILIZAÇÃO DO BODY */
-body{
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -51,7 +51,7 @@ body{
 }
 
 /* ESTILIZAÇÃO DA NAVBAR */
-nav{
+.navbar {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -68,23 +68,38 @@ nav{
     position: fixed;
     padding-left: 8rem;
     padding-right: 8rem;
+    transition: 0.5s;
 }
 
-nav .logo img{
+.navbar2 {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    background: transparent;
+    font-family: Poppins ExtraBold;
+    width: 100%;
+    position: fixed;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    transition: 0.5s;
+}
+
+nav .logo img {
     height: 3.7rem;
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     align-items: center;
 }
 
-nav ul li{
+nav ul li {
     margin: 1em;
 }
 
-nav ul li a{
+nav ul li a {
     display: flex;
     text-decoration: none;
     font-size: 1.3em;
@@ -92,14 +107,14 @@ nav ul li a{
     color: var(--white-background);
 }
 
-nav li a{
+nav li a {
     position: relative;
     list-style: none;
     letter-spacing: 0.5px;
     padding: 0 10px;
 }
 
-nav li a::after{
+nav li a::after {
     content: '';
     position: absolute;
     background-color: var(--white-background);
@@ -110,11 +125,11 @@ nav li a::after{
     transition: all 0.5s ease;
 }
 
-nav li a:hover::after{
+nav li a:hover::after {
     width: 100%;
 }
 
-.nav-items{
+.nav-items {
     margin: 0 1.6rem 0 0;
 }
 
@@ -143,17 +158,17 @@ nav li a:hover::after{
 }
 
 /* DESTAQUE DE TEXTO */
-highlight{
+highlight {
     color: var(--golden-solar) !important; 
 }
 
-::placeholder{
+::placeholder {
     color: var(--placeholder);
 }
 
 /* ESTILIZAÇÃO HOME PAGE*/
 /* SESSÃO HERO */
-.hero{
+.hero {
     width: 100%;
     height: 55rem;
     background-image: url(../img/bg-solar-panel.png);
@@ -161,7 +176,7 @@ highlight{
     background-size: 100% 100%;
 }
 
-.rightSide, .leftSide{
+.rightSide, .leftSide {
     width: 50%;
     height: 100%;
     display: flex;
@@ -169,7 +184,7 @@ highlight{
     justify-content: center;
 }
 
-.heroText{
+.heroText {
     font-family: Poppins ExtraBold;
     font-size: 2.7vw;
     color: var(--white-background);
@@ -177,7 +192,7 @@ highlight{
 }
 
 /* CADASTRO */
-.cad{
+.cad {
     width: 63%;
     height: 83%;
     background-color: var(--white-background);
@@ -187,7 +202,7 @@ highlight{
     align-items: center;
 }
 
-.cadContent{
+.cadContent {
     display: flex;
     width: 80%;
     justify-content: center;
@@ -195,8 +210,8 @@ highlight{
     flex-direction: column;
 }
 
-.cadTitle{
-    font-family: Poppins;
+.cadTitle {
+    font-family: Poppins Regular;
     font-weight: bold;
     font-size: 1.7vw;
     color: var(--main-text);
@@ -205,21 +220,21 @@ highlight{
     text-align: center;
 }
 
-.cadForm{
+.cadForm {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cadLabel, .cadLogin{
-    font-family: Poppins;
+.cadLabel, .cadLogin {
+    font-family: Poppins Regular;
     font-size: 1.3vw;
     color: var(--main-text);
     align-self: flex-start;
 }
 
-.cadInput{
+.cadInput {
     height: 2.5rem;
     width: 100%;
     margin-bottom: 2rem;
@@ -228,25 +243,25 @@ highlight{
     justify-content: center;
     align-items: center;
     background-color: var(--input-bg-color);
-    font-family: Poppins;
+    font-family: Poppins Regular;
     font-size: 1vw;
     border: none;
     border-radius: 10px;
     outline: none;
 }
 
-.cadLogin{
+.cadLogin {
     font-size: 1vw;
     text-align: center;
     width: 100%;
 }
 
-.login{
+.login {
     text-decoration: underline;
     color: var(--main-text) !important;
 }
 
-#btn-cad{
+#btn-cad {
     width: 85%;
     height: 4rem;
     margin-top: 2.5rem;
@@ -254,29 +269,29 @@ highlight{
 }
 
 /* SECTION CARDS */
-.section-cards{
+.section-cards {
     height: 50rem;
     width: 100%;
 }
 
-.topSide, .bottomSide{
+.topSide, .bottomSide {
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.topSide{
+.topSide {
     height: 20%;
     justify-content: center;
 }
 
-.bottomSide{
+.bottomSide {
     height: 80%;
     justify-content: space-around;
 }
 
-.title{
-    font-family: Poppins;
+.title {
+    font-family: Poppins Regular;
     font-weight: bold;
     font-size: 2.5vw;
     color: var(--main-text);
@@ -284,7 +299,7 @@ highlight{
 
 /* CARDS */
 
-.home-card{
+.home-card {
     display: inline-block;
     height: 35rem;
     width: 25%;
@@ -295,7 +310,7 @@ highlight{
     box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.2);
 }
 
-.card-title{
+.card-title {
     font-family: Poppins SemiBold;
     font-size: 2.1vw;
     margin-bottom: 3rem;
@@ -303,7 +318,7 @@ highlight{
     width: 75%;
 }
 
-.card-text{
+.card-text {
     font-family: Poppins Regular;
     font-size: 1.05vw;
     text-align: center;
@@ -311,7 +326,7 @@ highlight{
     width: 75%;
 }
 
-.cardContent{
+.cardContent {
     width: 100%;
     height: 100%;
     display: flex;
@@ -320,11 +335,11 @@ highlight{
     flex-direction: column;
 }
 
-.card-image{
+.card-image {
     margin-bottom: 3rem
 }
 
-.card-check{
+.card-check {
     justify-self: flex-start;
     align-self: flex-end;
     margin-top: 2rem;
@@ -332,27 +347,36 @@ highlight{
 }
 
 /* SECTION SOBRE NÓS */
-.section-aboutUs{
-    height: 35rem;
+.section-aboutUs {
+    height: 55rem;
     width: 100%;
     background-color: var(--section-aboutUs-bg);
 }
 
-.abt1{
-    width: 65%;
+.abtTopSide {
+    height: 100%;
 }
 
-.abt2{
-    width: 35%;
+.abtLeftSide {
+    flex-direction: column;
 }
 
-.aboutUs{
-    width: 80%;
-    justify-content: flex-start;
-}
-
-.aboutUs-text{
+.aboutUs-text {
     width: 80%;
     font-size: 1.5rem;
-    font-family: Poppins;
+    font-family: Poppins Regular;
+}
+
+.abtTitle {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+}
+
+.abtPic {
+    width: 80%;
+    height: 40%;
+    background-color: #6464FB;
 }

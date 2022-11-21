@@ -9,7 +9,7 @@
     <title>@yield('titulo')</title>
 </head>
 <body>
-    <nav>
+    <nav class="navbar2">
         <div class="logo">
             <a href="#"><img src="img/voltaic_logo_secundario_fundo_preto.png" alt="logo da Voltaic Technology"></a>
         </div>
@@ -25,5 +25,7 @@
     <main>
         @yield('conteudo')
     </main>
+    
+    <script src="script/script.js"></script>
 </body> 
 </html>
