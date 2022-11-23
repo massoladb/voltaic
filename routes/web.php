@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/cadastro', function () {
+/*Route::get('/cadastro', function () {
     return view('cadastro');
-});
+});*/
+
+Route::get('/cadastro', 'App\Http\Controllers\cadController@index');

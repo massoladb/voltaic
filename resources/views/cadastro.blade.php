@@ -8,14 +8,18 @@
             <form action="#" method="_POST" class="cadForm">
 
                 {{-- TIPO DE USUÁRIO --}}
-                <h3>Cadastrar como...</h3><br>
+                {{-- <h1 class="cad-title">Cadastrar como...</h1><br>
 
                 <label class="cadLabel-in">Contratante</label><br>
-                <button>Pessoa Física</button>
-                <button>Pessoa Jurídica</button>
+
+                <div class="user-btn">
+                    <button class="btn btn-cadUser">Pessoa Física</button>
+                    <button class="btn btn-cadUser">Pessoa Jurídica</button>
+                </div> --}}
+
 
                 <label class="cadLabel-in">Prestador de Serviço</label><br>
-                <button>Empresa Provedora</button>
+                <button class="btn btn-cadUser">Empresa Provedora</button>
 
                 {{-- INFORMAÇÕES PRÉVIAS --}}
                 <label class="cadLabel-in">Email</label><br>
@@ -41,10 +45,10 @@
                 <select name="tipoLocal" required>
                     <option value="Casa">Casa</option>
                     <option value="Apartamento">Apartamento</option>
-                    <option value="Condominio">Condomínio</option>
-                    <option value="Industria">Indústria</option>
+                    <option value="Condomínio">Condomínio</option>
+                    <option value="Indústria">Indústria</option>
                     <option value="Fazenda">Fazenda</option>
-                    <option value="FEmpresa">Empresa</option>
+                    <option value="Empresa">Empresa</option>
                 </select>
 
                 <label class="cadLabel-in">Bairro</label><br>
@@ -59,8 +63,6 @@
                 {{-- CONTATO --}}
                 <label class="cadLabel-in">Telefone</label><br>
                 <input type="tel" id="phone" name="phone" placeholder="(00) 12345-6789" pattern="[0-9]{2}-[1-9]{5}-[0-9]{4}-[0-9]" required>
-
-
             </form>
         </div>
     </section>

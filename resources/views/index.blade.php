@@ -4,7 +4,7 @@
     <script src="script/nav.js"></script>
     <style>
         #navbar {
-            background-color: #ffffff00 !important;
+            background-color: #ffffff00;
         }
     </style>
 @stop
@@ -79,7 +79,6 @@
             </div>
             <div class="rightSide">
                 <div class="abtPic">
-
                 </div>
             </div>
         </div>
