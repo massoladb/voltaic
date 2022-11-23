@@ -1,5 +1,14 @@
 @extends('layouts.master_page')
 
+@section('links')
+    <script src="script/nav.js"></script>
+    <style>
+        #navbar {
+            background-color: #ffffff00 !important;
+        }
+    </style>
+@stop
+
 @section('titulo', 'Bem-vindo à Voltaic')
 
 @section('conteudo')

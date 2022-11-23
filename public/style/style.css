@@ -56,7 +56,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 6rem;
-    background-color: #ffffff00;
+    background-color: #00031b;
     font-family: Poppins ExtraBold;
     width: 100%;
     position: fixed;
@@ -376,7 +376,7 @@ highlight {
 
 .cadContainer {
     width: 60%;
-    height: 70%;
-    background-color: #fbfbff;
+    height: 95%;
+    background-color: #dbe3e7;
     border-radius: 20px;
 }

@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="shortcut icon" href="img/favicon.ico">
-    <script src="script/jquery.min.js"></script>
-    <script src="script/nav.js"></script>
+    @yield('links')
     <title>@yield('titulo')</title>
 </head>
 <body>
     <nav id="navbar">
         <div class="logo">
-            <a href="#"><img src="img/voltaic_logo_secundario_fundo_preto.png" alt="logo da Voltaic Technology"></a>
+            <a href="/"><img src="img/voltaic_logo_secundario_fundo_preto.png" alt="logo da Voltaic Technology"></a>
         </div>
         <div class="nav-items">
             <ul class="nav-links">
