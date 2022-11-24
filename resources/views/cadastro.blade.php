@@ -6,21 +6,6 @@
     <section class="sectionCad">
         <div class="cadContainer">
             <form action="#" method="_POST" class="cadForm">
-
-                {{-- TIPO DE USUÁRIO --}}
-                {{-- <h1 class="cad-title">Cadastrar como...</h1><br>
-
-                <label class="cadLabel-in">Contratante</label><br>
-
-                <div class="user-btn">
-                    <button class="btn btn-cadUser">Pessoa Física</button>
-                    <button class="btn btn-cadUser">Pessoa Jurídica</button>
-                </div> --}}
-
-
-                <label class="cadLabel-in">Prestador de Serviço</label><br>
-                <button class="btn btn-cadUser">Empresa Provedora</button>
-
                 {{-- INFORMAÇÕES PRÉVIAS --}}
                 <label class="cadLabel-in">Email</label><br>
                 <input type="email" placeholder="voltaic@email.com" name="email" value="" required>
