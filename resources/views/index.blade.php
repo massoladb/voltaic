@@ -1,5 +1,14 @@
 @extends('layouts.master_page')
 
+@section('links')
+    <script src="script/nav.js"></script>
+    <style>
+        #navbar {
+            background-color: #ffffff00;
+        }
+    </style>
+@stop
+
 @section('titulo', 'Bem-vindo à Voltaic')
 
 @section('conteudo')
@@ -11,6 +20,8 @@
             <div class="cad">
                 <div class="cadContent">
                     <h2 class="cadTitle">Cadastre-se e <highlight>realize uma solicitação</highlight> quando quiser!</h2>
+
+                    {{-- FORM CADASTRO BASE --}}
                     <form action="/cadastro" method="_POST" class="cadForm">
                         <label class="cadLabel">Email</label><br>
                         <input type="email" placeholder="voltaic@email.com" name="email" class="cadInput">
@@ -19,8 +30,33 @@
                         <label class="cadLabel">Confirmar senha</label><br>
                         <input type="password" placeholder="✱✱✱✱✱✱✱✱" name="pswVerif" class="cadInput">                            
                         <p class="cadLogin">Já tem uma conta? <a class="login" href="#">Faça login.</a></p>
-                        <input class="btn" id="btn-cad" type="submit" value="Continuar cadastro" name="submitCad">
+                        <!-- Modal -->
+                        <div id="myModal" class="modal">
+                            <!-- Conteúdo -->
+                            <div class="modal-content">
+                                <span id="closeModal" class="close">&times;</span>
+                                <div class="modal-title">
+                                    <h1>Como você deseja se cadastrar...</h1>
+                                </div>
+                                <div class="modal-card">
+                                    <div class="user-card">
+                                        <div class="user-card-title">Pessoa<br> Física</div>
+                                        <button type="submit" name="submitCad" class="card-btn"><img src="../img/pessoa-fisica.png"></button>
+                                    </div>
+                                    <div class="user-card">
+                                        <div class="user-card-title">Pessoa<br> Jurídica</div>
+                                        <button type="submit" name="submitCad" class="card-btn"><img src="../img/pessoa-fisica.png"></button>
+                                    </div>
+                                    <div class="user-card">
+                                        <div class="user-card-title">Prestador de Serviço</div>
+                                        <button type="submit" name="submitCad" class="card-btn"><img src="../img/pessoa-fisica.png"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
+                    <button class="btn" id="myBtn">Continuar cadastro</button>
+
                 </div>
             </div>
         </div>
@@ -33,7 +69,7 @@
             <div class="home-card">
                 <div class="cardContent">
                     <img class="card-check" src="img/check.png" alt="check">
-                    <h3 class="card-title">Lorem Ipsum</h3>
+                    <h3 class="card-title">Fácil contato</h3>
                         <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <figure>
                         <img class="card-image" src="img/icone-relogio.png" alt="Ícone de um relógio">
@@ -70,7 +106,6 @@
             </div>
             <div class="rightSide">
                 <div class="abtPic">
-
                 </div>
             </div>
         </div>
