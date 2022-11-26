@@ -31,7 +31,7 @@
                         <input type="password" placeholder="✱✱✱✱✱✱✱✱" name="pswVerif" class="cadInput">                            
                         <p class="cadLogin">Já tem uma conta? <a class="login" href="#">Faça login.</a></p>
                         <!-- Modal -->
-                        <div id="myModal" class="modal">
+                        <div id="modalCad" class="modal">
                             <!-- Conteúdo -->
                             <div class="modal-content">
                                 <span id="closeModal" class="close">&times;</span>
@@ -40,27 +40,30 @@
                                 </div>
                                 <div class="modal-card">
                                     <div class="user-card">
-                                        <div class="user-card-title">Pessoa<br> Física</div>
-                                        <button type="submit" name="submitCad" class="card-btn"><img src="../img/pessoa-fisica.png"></button>
+                                        <div class="user-card-title">Pessoa<br><highlight>Física</highlight></div>
+                                        <div class="cad-card-text">Usuário contratante de serviços</div>
+                                        <button type="submit" name="submitCad" class="btn card-btn">Continuar</button>
                                     </div>
                                     <div class="user-card">
-                                        <div class="user-card-title">Pessoa<br> Jurídica</div>
-                                        <button type="submit" name="submitCad" class="card-btn"><img src="../img/pessoa-fisica.png"></button>
+                                        <div class="user-card-title">Pessoa<br><highlight>Jurídica</highlight></div>
+                                        <div class="cad-card-text">Empresa contratante de serviços</div>
+                                        <button type="submit" name="submitCad" class="btn card-btn">Continuar</button>
                                     </div>
                                     <div class="user-card">
-                                        <div class="user-card-title">Prestador de Serviço</div>
-                                        <button type="submit" name="submitCad" class="card-btn"><img src="../img/pessoa-fisica.png"></button>
+                                        <div class="user-card-title">Prestador de <highlight>Serviços</highlight></div>
+                                        <div class="cad-card-text">Empresa instaladora ou provedora</div>
+                                        <button type="submit" name="submitCad" class="btn card-btn">Continuar</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
-                    <button class="btn" id="myBtn">Continuar cadastro</button>
-
+                    <button class="btn" id="continueCad">Continuar cadastro</button>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="section-cards">
         <div class="topSide">
             <h2 class="title">Por que utilizar a nossa plaforma?</h2>
@@ -70,7 +73,7 @@
                 <div class="cardContent">
                     <img class="card-check" src="img/check.png" alt="check">
                     <h3 class="card-title">Fácil contato</h3>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p class="card-text">Usuários contratantes e provedores de serviço comunicam-se entre si de maneira intuitiva</p>
                     <figure>
                         <img class="card-image" src="img/icone-relogio.png" alt="Ícone de um relógio">
                     </figure>
@@ -105,8 +108,7 @@
                 <div class="aboutUs-text">Somos uma equipe de TCC do curso técnico em Desenvolvimento de Sistemas na Etec Drª Ruth Cardoso, composta por Bruno Santana, Felipe Massola, João Gabriel, José Felipe e Kattryel Rezende orientados pelos professores Charles Barros e Daniela Uebele.</div>
             </div>
             <div class="rightSide">
-                <div class="abtPic">
-                </div>
+                <img class="abtPic" src="img/voltaic-equipe.jpg" alt="foto da equipe criadora da plataforma Voltaic Technology">
             </div>
         </div>
     </section>

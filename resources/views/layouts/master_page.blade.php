@@ -18,7 +18,7 @@
         </div>
         <div class="nav-items">
             <ul class="nav-links">
-                <li><a href="#">Página inicial</a></li>
+                <li><a href="/">Página inicial</a></li>
                 <li><a href="#">Solicite agora</a></li>
                 <li><a href="#">Artigos</a></li>
                 <button class="btn">Entrar</button>
@@ -32,13 +32,13 @@
     <footer>
         <div class="social">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/massoladb/voltaic"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
     
         <ul class="list">
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Página Inicial</a></li>
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Termos</a></li>
             <li><a href="#">Política de privacidade</a></li>

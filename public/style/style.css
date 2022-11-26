@@ -63,7 +63,7 @@ body {
     position: fixed;
     padding-left: 8rem;
     padding-right: 8rem;
-    transition: 0.5s;
+    transition: 0.3s ease-in;
 }
 
 .showNav {
@@ -107,7 +107,7 @@ nav li a::after {
     width: 0;
     left: 0;
     bottom: -8px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 nav li a:hover::after {
@@ -362,8 +362,7 @@ highlight {
 
 .abtPic {
     width: 80%;
-    height: 40%;
-    background-color: #6464FB;
+    border-radius: 10px;
 }
 
 /* SECTION CADASTRO */
@@ -396,6 +395,8 @@ highlight {
     font-family: Poppins Regular;
     font-weight: 200;
     font-size: 1.25rem;
+    color: var(--main-text);
+    align-self: flex-start;
 }
 
 #myBtn {
@@ -403,7 +404,7 @@ highlight {
 }
 
 .modal {
-    display: flex; 
+    display: none; 
     position: fixed; 
     z-index: 1; 
     left: 0;
@@ -428,6 +429,8 @@ highlight {
     margin: auto;
     border: 1px solid #888;
     width: 70%;
+    height: 75%;
+    border-radius: 20px;
   }
 
   .modal-title, .modal-card {
@@ -455,14 +458,14 @@ highlight {
     top: 1rem;
     right: 1rem;
     position: absolute;
-    color: #aaaaaa;
+    color: #ffffff;
     font-size: 28px;
     font-weight: bold;
   }
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: rgb(135, 135, 135);
     text-decoration: none;
     cursor: pointer;
   }
@@ -471,10 +474,25 @@ highlight {
     color: #fff !important;
     width: 18rem;
     height: 24rem;
-    background-color: #00031D;
-    display: inline-block;
+    background-color: #f1f1f1;
+    display: flex;
     margin: 3rem;
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-card:hover {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .user-card:hover .card-btn {
+    display: block;
+  }
+
+  .user-card:hover .cad-card-text {
+    display: flex;
   }
 
   .user-card-title {
@@ -483,18 +501,47 @@ highlight {
     text-align: center;
     margin-top: 2rem;
     line-height: 2rem;
+    color: var(--main-text);
+  }
+
+  .cad-card-text {
+    font-size: 1rem;
+    font-family: Poppins Regular;
+    text-align: center;
+    width: 70%;
+    display: none;
+    color: var(--main-text);
   }
 
   .card-btn {
-    margin-top: 0.75rem;
-    border: none;
     width: 12rem;
-    height: 15.5rem;
-    background-color: #00031d;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    margin-left: 0.5rem;
+    height: 3.5rem;
+    background-color: var(--blue-solar);
+    display: none;
+  }
+
+  .cadselect-in {
+    margin-bottom:0.8rem;
+    height: 2.5rem;
+    font-size: 1vw;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--input-bg-color);
+    font-family: Poppins Regular;
+  }
+
+  .cadinput-in {
+    margin-top: -0.3rem;
+    margin-bottom:0.8rem;
+    height: 2.5rem;
+    font-size: 1vw;
+    border-radius: 10px;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+    background-color: var(--input-bg-color);
+    font-family: Poppins Regular;
   }
   
   /*footer*/
@@ -562,4 +609,4 @@ highlight {
     text-align: center;
     font-size: 0.9rem;
     color: #fafafa;
-  }
+  } 
