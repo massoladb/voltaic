@@ -10,9 +10,23 @@
     src: url(./assets/fonts/Inter-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Inter ExtraBold';
+    src: url(./assets/fonts/Inter-ExtraBold.ttf);
+}
+
 ::ng-deep * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #0a0a15e6;
+    color: #0a0a15;
+    scroll-behavior: smooth
+}
+
+body {
+    @apply min-h-screen;
+}
+
+.card {
+    @apply flex flex-col justify-center items-center w-full p-4 rounded-md bg-white shadow-lg gap-2 sm:justify-start 2xl:p-8;
 }

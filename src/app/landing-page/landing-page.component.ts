@@ -10,6 +10,12 @@ export class LandingPageComponent {
   // stores the state of the menu
   menuIsOpen: boolean = false;
 
+  // stores the state of the dropdowns
+  dropdowns: any = {
+    exploreIsOpen: false,
+    contactIsOpen: false
+  }
+
   // opens the nav menu
   openMenu(): void {
     // selects the elements of the hamburger menu
@@ -35,5 +41,20 @@ export class LandingPageComponent {
     }
 
     this.menuIsOpen = !this.menuIsOpen;
+  }
+
+  // opens the footer dropdowns
+  openDropdown(dropdown: string): void {
+    const explore: HTMLElement = document.getElementById('explore') as HTMLElement;
+
+    if (dropdown == 'explore' && !this.dropdowns.exploreIsOpen) {
+      explore.classList.remove('hidden');
+      explore.classList.add('flex');
+      this.dropdowns.exploreIsOpen = !this.dropdowns.exploreIsOpen;
+    } else if (dropdown == 'explore' && this.dropdowns.exploreIsOpen) {
+      explore.classList.remove('flex');
+      explore.classList.add('hidden')
+      this.dropdowns.exploreIsOpen = !this.dropdowns.exploreIsOpen;
+    }
   }
 }
