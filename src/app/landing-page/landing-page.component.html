@@ -1,1 +1,42 @@
-<p>landing-page works!</p>
+<nav class="flex justify-center items-center absolute top-0 w-full h-20 p-4">
+    <div class="flex justify-between items-center w-full h-full lg:w-4/5 xl:w-3/4">
+        <img src="assets/logos/icon.png" alt="Ícone da Voltaic" class="h-full sm:hidden lg:block xl:hidden">
+        <img src="assets/logos/logo-small.png" alt="Logo da Voltaic" class="h-full hidden sm:block lg:hidden xl:block">
+
+        <div class="group h-8 flex items-center justify-between flex-col cursor-pointer z-10 lg:hidden" id="menu" (click)="openMenu()">
+            <div class="w-10 h-1.5 transition-transform bg-dark-800 rounded-full" id="top-bar"></div>
+            <div class="w-10 h-1.5 transition-transform bg-dark-800 rounded-full" id="middle-bar"></div>
+            <div class="w-10 h-1.5 transition-transform bg-dark-800 rounded-full" id="bottom-bar"></div>
+        </div>
+
+        <div class="flex flex-col flex-wrap justify-start items-center gap-5 w-60 h-screen fixed top-0 right-0 shadow-2xl bg-white pt-20 pr-4 pb-4 pl-4 translate-x-60 transition-transform lg:hidden" id="sidebar">
+            <div class="flex justify-center items-center w-full h-fit font-semibold text-xl p-2 text-dark-900">
+                Sobre nós
+            </div>
+            <div class="flex justify-center items-center w-full h-fit font-semibold text-xl p-2 text-dark-900">
+                Benefícios
+            </div>
+            <div class="flex justify-center items-center w-full h-fit font-semibold text-xl p-2 text-dark-900">
+                Primeiros passos
+            </div>
+            <div class="flex justify-center items-center w-full h-fit font-semibold text-xl p-2 text-dark-900 bg-dark-50 rounded-md cursor-pointer">
+                Entrar
+            </div>
+            <div class="flex justify-center items-center w-full h-fit font-semibold text-xl p-2 text-white bg-primary rounded-md cursor-pointer">
+                Cadastre-se
+            </div>
+        </div>
+
+        <div class="hidden lg:flex h-full items-center gap-5">
+            <a class="text-xl font-semibold text-dark-900 cursor-pointer">Sobre nós</a>
+            <a class="text-xl font-semibold text-dark-900 cursor-pointer">Benefícios</a>
+            <a class="text-xl font-semibold text-dark-900 cursor-pointer">Primeiros passos</a>
+            <div class="h-8 w-[4px] bg-dark-100 rounded-full"></div>
+            <a class="text-xl font-semibold text-dark-900 cursor-pointer">Entrar</a>
+            <button class="flex justify-center items-center text-xl font-semibold text-white bg-primary p-2 pr-4 pl-4 rounded-md gap-4 cursor-pointer transition-colors hover:bg-primary-100">
+                Cadastre-se
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</nav>

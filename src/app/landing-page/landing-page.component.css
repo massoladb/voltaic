@@ -1,0 +1,19 @@
+.menu-open-top {
+    @apply rotate-45 absolute;
+}
+
+.menu-open-middle {
+    @apply scale-0;
+}
+
+.menu-open-bottom {
+    @apply -rotate-45 absolute;
+}
+
+.menu-open {
+    @apply justify-center;
+}
+
+.menu-open-sidebar {
+    @apply translate-x-0
+}
