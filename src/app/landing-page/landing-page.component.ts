@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
+
 export class LandingPageComponent {
 
   // stores the state of the menu
@@ -13,12 +14,11 @@ export class LandingPageComponent {
   // stores the state of the dropdowns
   dropdowns: any = {
     exploreIsOpen: false,
-    contactIsOpen: false
+    mediaIsOpen: false
   }
 
   // opens the nav menu
   openMenu(): void {
-    // selects the elements of the hamburger menu
     const menu: HTMLElement = document.getElementById('menu') as HTMLElement;
     const top: HTMLElement = document.getElementById('top-bar') as HTMLElement;
     const middle: HTMLElement = document.getElementById('middle-bar') as HTMLElement;
@@ -45,16 +45,44 @@ export class LandingPageComponent {
 
   // opens the footer dropdowns
   openDropdown(dropdown: string): void {
-    const explore: HTMLElement = document.getElementById('explore') as HTMLElement;
+    const dropdownState: string = dropdown + 'IsOpen';
 
-    if (dropdown == 'explore' && !this.dropdowns.exploreIsOpen) {
-      explore.classList.remove('hidden');
-      explore.classList.add('flex');
-      this.dropdowns.exploreIsOpen = !this.dropdowns.exploreIsOpen;
-    } else if (dropdown == 'explore' && this.dropdowns.exploreIsOpen) {
-      explore.classList.remove('flex');
-      explore.classList.add('hidden')
-      this.dropdowns.exploreIsOpen = !this.dropdowns.exploreIsOpen;
+    const changeDropdownStyle = (dropdown: string, add: boolean): void => {
+      const dropdownElement: HTMLElement = document.getElementById(dropdown) as HTMLElement;
+
+      if (add) {
+        dropdownElement.classList.add('flex');
+        dropdownElement.classList.remove('hidden');
+      } else {
+        dropdownElement.classList.add('hidden');
+        dropdownElement.classList.remove('flex');
+      }
+
+      this.dropdowns[dropdownState] = !this.dropdowns[dropdownState];
+    }
+
+    if (this.dropdowns[dropdownState]) {
+      changeDropdownStyle(dropdown, false);
+    } else {
+      changeDropdownStyle(dropdown, true);
+    }
+  }
+
+  // goes back to the top of the page
+  backToTop(): void {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  showBackToTopButton(event: any): void {
+    const button: HTMLElement = document.getElementById('back-to-top-button') as HTMLElement;
+
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      button.classList.remove("scale-0");
+      button.classList.add("scale-100");
+    } else {
+      button.classList.remove("scale-100");
+      button.classList.add("scale-0");
     }
   }
 }

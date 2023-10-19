@@ -20,7 +20,11 @@
     margin: 0;
     box-sizing: border-box;
     color: #0a0a15;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+}
+
+* {
+    @apply transition-all;
 }
 
 body {
@@ -28,5 +32,5 @@ body {
 }
 
 .card {
-    @apply flex flex-col justify-center items-center w-full p-4 rounded-md bg-white shadow-lg gap-2 sm:justify-start 2xl:p-8;
+    @apply flex flex-col items-center justify-center w-full gap-2 p-4 bg-white rounded-md shadow-lg hover:scale-105 sm:justify-start 2xl:p-8;
 }

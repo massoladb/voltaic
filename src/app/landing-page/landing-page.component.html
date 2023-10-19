@@ -1,45 +1,45 @@
-<nav class="flex justify-center items-center absolute top-0 w-full h-20 p-4 sm:px-12">
-    <div class="flex justify-between items-center w-full h-full lg:w-4/5 xl:w-3/4">
+<nav class="absolute top-0 flex items-center justify-center w-full h-20 p-4 sm:px-12">
+    <div class="flex items-center justify-between w-full h-full lg:w-4/5 xl:w-3/4">
         <img src="assets/logos/icon.png" alt="Ícone da Voltaic" class="h-full sm:hidden lg:block xl:hidden">
-        <img src="assets/logos/logo-small.png" alt="Logo da Voltaic" class="h-full hidden sm:block lg:hidden xl:block">
+        <img src="assets/logos/logo-small.png" alt="Logo da Voltaic" class="hidden h-full sm:block lg:hidden xl:block">
 
-        <div class="group h-8 flex items-center justify-between flex-col cursor-pointer z-10 lg:hidden" id="menu"
+        <div class="z-10 flex flex-col items-center justify-between h-8 cursor-pointer group lg:hidden" id="menu"
             (click)="openMenu()">
             <div class="menu-bar" id="top-bar"></div>
             <div class="menu-bar" id="middle-bar"></div>
             <div class="menu-bar" id="bottom-bar"></div>
         </div>
 
-        <div class="flex flex-col flex-wrap justify-start items-center gap-5 w-60 h-screen fixed top-0 right-0 shadow-2xl bg-white pt-20 pr-4 pb-4 pl-4 translate-x-60 transition-all lg:hidden"
+        <div class="fixed top-0 right-0 flex flex-col flex-wrap items-center justify-start h-screen gap-5 pt-20 pb-4 pl-4 pr-4 bg-white shadow-2xl w-60 translate-x-60 lg:hidden"
             id="sidebar">
-            <a class="flex justify-center items-center w-full h-fit p-2 semibold-text">
+            <a class="flex items-center justify-center w-full p-2 h-fit semibold-text">
                 Sobre nós
             </a>
-            <a class="flex justify-center items-center w-full h-fit p-2 semibold-text">
+            <a class="flex items-center justify-center w-full p-2 h-fit semibold-text">
                 Benefícios
             </a>
-            <a class="flex justify-center items-center w-full h-fit p-2 semibold-text">
+            <a class="flex items-center justify-center w-full p-2 h-fit semibold-text">
                 Primeiros passos
             </a>
             <a
-                class="flex justify-center items-center w-full h-fit p-2 semibold-text bg-dark-50 rounded-md cursor-pointer">
+                class="flex items-center justify-center w-full p-2 rounded-md cursor-pointer h-fit semibold-text bg-dark-50">
                 Entrar
             </a>
             <button
-                class="flex justify-center items-center w-full h-fit text-xl p-2 text-white bg-primary rounded-md cursor-pointer gap-4 transition-all hover:bg-primary-100">
+                class="flex items-center justify-center w-full gap-4 p-2 text-xl text-white rounded-md cursor-pointer h-fit bg-primary hover:bg-primary-100">
                 Cadastre-se
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
 
-        <div class="hidden lg:flex h-full items-center gap-5">
-            <a class="semibold-text cursor-pointer">Sobre nós</a>
-            <a class="semibold-text cursor-pointer">Benefícios</a>
-            <a class="semibold-text cursor-pointer">Primeiros passos</a>
+        <div class="items-center hidden h-full gap-5 lg:flex">
+            <a class="cursor-pointer semibold-text">Sobre nós</a>
+            <a class="cursor-pointer semibold-text">Benefícios</a>
+            <a class="cursor-pointer semibold-text">Primeiros passos</a>
             <div class="h-8 w-[4px] bg-dark-150 rounded-full"></div>
-            <a class="semibold-text cursor-pointer">Entrar</a>
+            <a class="cursor-pointer semibold-text">Entrar</a>
             <button
-                class="flex justify-center items-center text-xl text-white bg-primary p-2 pr-4 pl-4 rounded-md gap-4 cursor-pointer transition-all hover:bg-primary-100">
+                class="flex items-center justify-center gap-4 p-2 pl-4 pr-4 text-xl text-white rounded-md cursor-pointer bg-primary hover:bg-primary-100">
                 Cadastre-se
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
@@ -50,172 +50,190 @@
 <header
     class="flex justify-center items-center flex-col w-full h-[90vh] min-h-[40rem] bg-[url('/assets/gradient-bg.png')] bg-no-repeat bg-center bg-cover p-4 sm:h-[80vh] lg:h-[90vh] 2xl:h-[100vh] sm:px-12">
     <div class="flex flex-col w-full gap-4 sm:flex-row lg:w-4/5 xl:w-3/4">
-        <div class="flex flex-col justify-center items-center gap-4 w-full xl:gap-8 2xl:gap-10">
-            <h1 class="w-full text-4xl font-extrabold font-sans-extrabold text-dark-900 text-center sm:text-left lg:text-6xl 2xl:text-7xl">
+        <div class="flex flex-col items-center justify-center w-full gap-4 xl:gap-8 2xl:gap-10">
+            <h1 class="w-full text-4xl font-extrabold text-center font-sans-extrabold text-dark-900 sm:text-left lg:text-6xl 2xl:text-7xl">
                 Luz do sol, energia do futuro.
             </h1>
-            <p class="w-full text-center text-dark-650 text-base sm:text-left">Encontre provedores de energia solar em sua região e economize na
+            <p class="w-full text-base text-center text-dark-650 sm:text-left">Encontre provedores de energia solar em sua região e economize na
                 conta de luz contribuindo com o meio ambiente.</p>
-            <div class="flex flex-wrap justify-between items-center w-full gap-4">
+            <div class="flex flex-wrap items-center justify-between w-full gap-4">
                 <button
-                    class="flex flex-1 flex-shrink-0 basis-[fit-content] justify-center items-center h-fit text-lg p-2 text-white bg-primary rounded-md cursor-pointer gap-4 transition-all hover:bg-primary-100">
+                    class="flex flex-1 flex-shrink-0 basis-[fit-content] justify-center items-center h-fit text-lg p-2 text-white bg-primary rounded-md cursor-pointer gap-4 hover:bg-primary-100">
                     Economizar agora
                     <i class="fa-solid fa-right-to-bracket"></i>
                 </button>
                 <button
-                    class="flex flex-1 flex-shrink-0 basis-[fit-content] justify-center items-center h-fit text-lg p-2 text-white bg-secondary rounded-md cursor-pointer gap-4 sm:bg-transparent sm:rounded-none sm:text-dark-900 sm:underline sm:after:content-['.'] sm:gap-0 sm:p-0 sm:flex-none transition-all hover:bg-secondary-100">
+                    class="flex flex-1 flex-shrink-0 basis-[fit-content] justify-center items-center h-fit text-lg p-2 text-white bg-secondary rounded-md cursor-pointer gap-4 sm:bg-transparent sm:rounded-none sm:text-dark-900 sm:underline sm:after:content-['.'] sm:gap-0 sm:p-0 sm:flex-none hover:bg-secondary-100 sm:hover:bg-transparent">
                     Já possuo uma conta
                     <i class="fa-solid fa-user sm:hidden"></i>
                 </button>
             </div>
         </div>
         
-        <div class="flex justify-center items-center w-full sm:1/2">
+        <div class="flex items-center justify-center w-full sm:1/2">
             <img src="assets/platform-preview.png" alt="Miniaturas de telas da Voltaic" class="w-full">
         </div>
     </div>
 </header>
 
-<main class="flex items-center flex-col w-full pt-0 p-4 2xl:-mt-20 sm:px-12">
-    <div class="flex items-center flex-col w-full gap-12 lg:w-4/5 lg:gap-24 xl:w-3/4">
+<main class="flex flex-col items-center w-full p-4 pt-0 2xl:-mt-20 sm:px-12">
+    <div class="flex flex-col items-center w-full gap-12 lg:w-4/5 lg:gap-24 xl:w-3/4">
         <div class="flex w-full lg:gap-8">
-            <div class="flex flex-col justify-center items-center w-full gap-4 lg:items-start lg:w-3/5">
-                <div class="flex flex-col justify-center items-center w-full lg:items-start">
-                    <h3 class="font-bold text-primary text-lg text-center lg:text-left">Sobre nós</h3>
-                    <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center lg:text-3xl lg:text-left 2xl:text-4xl">Quem somos?</h2>
+            <div class="flex flex-col items-center justify-center w-full gap-4 lg:items-start lg:w-3/5">
+                <div class="flex flex-col items-center justify-center w-full lg:items-start">
+                    <h3 class="text-lg font-bold text-center text-primary lg:text-left">Sobre nós</h3>
+                    <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 lg:text-3xl lg:text-left 2xl:text-4xl">Quem somos?</h2>
                 </div>
-                <p class="w-full text-center text-dark-650 text-base sm:max-w-lg lg:text-left 2xl:max-w-2xl">A Voltaic é uma empresa que visa ampliar o mercado brasileiro de energia solar, conectando usuários de todo o Brasil com empresas que fazem a instalação ou manutenção dos equipamentos necessários para você começar a economizar ao mesmo tempo que ajuda o planeta.</p>
+                <p class="w-full text-base text-center text-dark-650 sm:max-w-lg lg:text-left 2xl:max-w-2xl">A Voltaic é uma empresa que visa ampliar o mercado brasileiro de energia solar, conectando usuários de todo o Brasil com empresas que fazem a instalação ou manutenção dos equipamentos necessários para você começar a economizar ao mesmo tempo que ajuda o planeta.</p>
             </div>
-            <div class="justify-center items-center w-2/5 hidden lg:flex">
+            <div class="items-center justify-center hidden w-2/5 lg:flex">
                 <img src="assets/logos/logo-big.png" alt="Logo da Voltaic" class="w-full">
             </div>
         </div>
 
-        <div class="flex flex-col justify-between items-center gap-4 w-full sm:flex-row sm:items-start xl:gap-10 2xl:gap-24">
-            <div class="flex flex-col justify-center items-center w-full p-4 gap-2">
-                <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center 2xl:text-4xl">Missão</h2>
-                <p class="w-full text-center text-dark-650 text-base">Amenizar as mudanças climáticas por meio da popularização e facilitação do acesso à energia solar, pois acreditamos que essa seja a opção mais viável para o combate contra o aquecimento global.</p>
+        <div class="flex flex-col items-center justify-between w-full gap-4 sm:flex-row sm:items-start xl:gap-10 2xl:gap-24">
+            <div class="flex flex-col items-center justify-center w-full gap-2 p-4">
+                <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 2xl:text-4xl">Missão</h2>
+                <p class="w-full text-base text-center text-dark-650">Amenizar as mudanças climáticas por meio da popularização e facilitação do acesso à energia solar, pois acreditamos que essa seja a opção mais viável para o combate contra o aquecimento global.</p>
             </div>
-            <div class="flex flex-col justify-center items-center w-full p-4 gap-2">
-                <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center 2xl:text-4xl">Visão</h2>
-                <p class="w-full text-center text-dark-650 text-base">O crescimento do mercado da energia fotovoltaica e o conhecimento do público geral sobre painéis solares e seus benefícios.</p>
+            <div class="flex flex-col items-center justify-center w-full gap-2 p-4">
+                <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 2xl:text-4xl">Visão</h2>
+                <p class="w-full text-base text-center text-dark-650">O crescimento do mercado da energia fotovoltaica e o conhecimento do público geral sobre painéis solares e seus benefícios.</p>
             </div>
-            <div class="flex flex-col justify-center items-center w-full p-4 gap-2">
-                <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center 2xl:text-4xl">Valores</h2>
-                <p class="w-full text-center text-dark-650 text-base">Inovação, eficiência e responsabilidade com o meio ambiente.</p>
+            <div class="flex flex-col items-center justify-center w-full gap-2 p-4">
+                <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 2xl:text-4xl">Valores</h2>
+                <p class="w-full text-base text-center text-dark-650">Inovação, eficiência e responsabilidade com o meio ambiente.</p>
             </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center w-full gap-4 lg:items-start">
-            <div class="flex flex-col justify-center items-center w-full lg:items-start">
-                <h3 class="font-bold text-primary text-lg text-center lg:text-left">Benefícios</h3>
-                <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center lg:text-3xl lg:text-left 2xl:text-4xl">Seu investimento gera resultado.</h2>
+        <div class="flex flex-col items-center justify-center w-full gap-4 lg:items-start">
+            <div class="flex flex-col items-center justify-center w-full lg:items-start">
+                <h3 class="text-lg font-bold text-center text-primary lg:text-left">Benefícios</h3>
+                <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 lg:text-3xl lg:text-left 2xl:text-4xl">Seu investimento gera resultado.</h2>
             </div>
-            <p class="w-full text-center text-dark-650 text-base sm:max-w-lg lg:text-left 2xl:max-w-2xl">A instalação de um sistema de energia fotovoltaica em seu imóvel garante diversos benefícios.</p>
+            <p class="w-full text-base text-center text-dark-650 sm:max-w-lg lg:text-left 2xl:max-w-2xl">A instalação de um sistema de energia fotovoltaica em seu imóvel garante diversos benefícios.</p>
         </div>
 
-        <div class="flex flex-col justify-between items-center gap-4 w-full sm:flex-row sm:items-stretch xl:gap-10 2xl:gap-24">
+        <div class="flex flex-col items-center justify-between w-full gap-4 sm:flex-row sm:items-stretch xl:gap-10 2xl:gap-24">
             <div class="card">
-                <div class="flex gap-3 w-full items-center">
+                <div class="flex items-center w-full gap-3">
                     <i class="fa-solid fa-coins text-primary 2xl:text-lg"></i>
-                    <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-base 2xl:text-lg">Economia na conta de luz.</h2>
+                    <h2 class="text-base font-extrabold font-sans-extrabold text-dark-900 2xl:text-lg">Economia na conta de luz.</h2>
                 </div>
                 <div class="w-full h-0.5 rounded-full bg-dark-50"></div>
-                <p class="w-full text-dark-650 text-base">Com painéis solares em seu imóvel, você recebe um grande abate nas tarifas de energia elétrica e tem um retorno do investimento em cerca de 5 a 8 anos.</p>
+                <p class="w-full text-base text-dark-650">Com painéis solares em seu imóvel, você recebe um grande abate nas tarifas de energia elétrica e tem um retorno do investimento em cerca de 5 a 8 anos.</p>
             </div>
             <div class="card">
-                <div class="flex gap-3 w-full items-center">
+                <div class="flex items-center w-full gap-3">
                     <i class="fa-solid fa-building text-primary 2xl:text-lg"></i>
-                    <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-base 2xl:text-lg">Aumento no preço do imóvel.</h2>
+                    <h2 class="text-base font-extrabold font-sans-extrabold text-dark-900 2xl:text-lg">Aumento no preço do imóvel.</h2>
                 </div>
                 <div class="w-full h-0.5 rounded-full bg-dark-50"></div>
-                <p class="w-full text-dark-650 text-base">Após implementar um sistema de energia solar em sua casa, empresa ou fábrica, seu imóvel pode se valorizar, em média, de 3% a 6%.</p>
+                <p class="w-full text-base text-dark-650">Após implementar um sistema de energia solar em sua casa, empresa ou fábrica, seu imóvel pode se valorizar, em média, de 3% a 6%.</p>
             </div>
             <div class="card">
-                <div class="flex gap-3 w-full items-center">
+                <div class="flex items-center w-full gap-3">
                     <i class="fa-solid fa-solar-panel text-primary 2xl:text-lg"></i>
-                    <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-base 2xl:text-lg">Alta durabilidade dos painéis.</h2>
+                    <h2 class="text-base font-extrabold font-sans-extrabold text-dark-900 2xl:text-lg">Alta durabilidade dos painéis.</h2>
                 </div>
                 <div class="w-full h-0.5 rounded-full bg-dark-50"></div>
-                <p class="w-full text-dark-650 text-base">Painéis solares possuem uma vida útil estimada em 25 anos. Durante esse período, manutenções raramente são necessárias.</p>
+                <p class="w-full text-base text-dark-650">Painéis solares possuem uma vida útil estimada em 25 anos. Durante esse período, manutenções raramente são necessárias.</p>
             </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center w-full gap-4 lg:items-start">
-            <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center lg:text-3xl lg:text-left 2xl:text-4xl">Por que utilizar nossa plataforma?</h2>
-            <p class="w-full text-center text-dark-650 text-base sm:max-w-lg lg:text-left 2xl:max-w-2xl">Confira as vantagens da utilização da nossa plataforma para encontrar os melhores provedores de energia solar para você.</p>
+        <div class="flex flex-col items-center justify-center w-full gap-4 lg:items-start">
+            <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 lg:text-3xl lg:text-left 2xl:text-4xl">Por que utilizar nossa plataforma?</h2>
+            <p class="w-full text-base text-center text-dark-650 sm:max-w-lg lg:text-left 2xl:max-w-2xl">Confira as vantagens da utilização da nossa plataforma para encontrar os melhores provedores de energia solar para você.</p>
         </div>
 
-        <div class="flex flex-col justify-between items-center gap-4 w-full sm:flex-row sm:items-stretch xl:gap-10 2xl:gap-24">
+        <div class="flex flex-col items-center justify-between w-full gap-4 sm:flex-row sm:items-stretch xl:gap-10 2xl:gap-24">
             <div class="card">
-                <div class="flex gap-3 w-full items-center">
+                <div class="flex items-center w-full gap-3">
                     <i class="fa-solid fa-earth-americas text-primary 2xl:text-lg"></i>
-                    <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-base 2xl:text-lg">Apoio ao meio ambiente.</h2>
+                    <h2 class="text-base font-extrabold font-sans-extrabold text-dark-900 2xl:text-lg">Apoio ao meio ambiente.</h2>
                 </div>
                 <div class="w-full h-0.5 rounded-full bg-dark-50"></div>
-                <p class="w-full text-dark-650 text-base">Com a instalação de painéis solares você contribui com o meio ambiente e reduz as emissões de gás carbônico na atmosfera, amenizando as mudanças climáticas.</p>
+                <p class="w-full text-base text-dark-650">Com a instalação de painéis solares você contribui com o meio ambiente e reduz as emissões de gás carbônico na atmosfera, amenizando as mudanças climáticas.</p>
             </div>
             <div class="card">
-                <div class="flex gap-3 w-full items-center">
+                <div class="flex items-center w-full gap-3">
                     <i class="fa-solid fa-circle-nodes text-primary 2xl:text-lg"></i>
-                    <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-base 2xl:text-lg">Conexão direta com provedores.</h2>
+                    <h2 class="text-base font-extrabold font-sans-extrabold text-dark-900 2xl:text-lg">Conexão direta com provedores.</h2>
                 </div>
                 <div class="w-full h-0.5 rounded-full bg-dark-50"></div>
-                <p class="w-full text-dark-650 text-base">Comunique-se de maneira prática e eficaz com as empresas de sua preferência, podendo fazer pré-orçamentos sem mesmo precisar contatá-los.</p>
+                <p class="w-full text-base text-dark-650">Comunique-se de maneira prática e eficaz com as empresas de sua preferência, podendo fazer pré-orçamentos sem mesmo precisar contatá-los.</p>
             </div>
             <div class="card">
-                <div class="flex gap-3 w-full items-center">
+                <div class="flex items-center w-full gap-3">
                     <i class="fa-solid fa-dove text-primary 2xl:text-lg"></i>
-                    <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-base 2xl:text-lg">Liberdade de escolha.</h2>
+                    <h2 class="text-base font-extrabold font-sans-extrabold text-dark-900 2xl:text-lg">Liberdade de escolha.</h2>
                 </div>
                 <div class="w-full h-0.5 rounded-full bg-dark-50"></div>
-                <p class="w-full text-dark-650 text-base">Decida suas preferências de filtros e opções de contato com os provedores de energia solar, sem limitações.</p>
+                <p class="w-full text-base text-dark-650">Decida suas preferências de filtros e opções de contato com os provedores de energia solar, sem limitações.</p>
             </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center w-full gap-4 lg:items-start">
-            <div class="flex flex-col justify-center items-center w-full lg:items-start">
-                <h3 class="font-bold text-primary text-lg text-center lg:text-left">Primeiros passos</h3>
-                <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center lg:text-3xl lg:text-left 2xl:text-4xl">Faça seu orçamento em poucas etapas.</h2>
+        <div class="flex flex-col items-center justify-center w-full gap-4 lg:items-start">
+            <div class="flex flex-col items-center justify-center w-full lg:items-start">
+                <h3 class="text-lg font-bold text-center text-primary lg:text-left">Primeiros passos</h3>
+                <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 lg:text-3xl lg:text-left 2xl:text-4xl">Faça seu orçamento em poucas etapas.</h2>
             </div>
-            <p class="w-full text-center text-dark-650 text-base sm:max-w-lg lg:text-left 2xl:max-w-2xl">Utilizando nossa plataforma, em apenas alguns minutos, você já consegue fazer orçamentos e entrar em contato com empresas.</p>
+            <p class="w-full text-base text-center text-dark-650 sm:max-w-lg lg:text-left 2xl:max-w-2xl">Utilizando nossa plataforma, em apenas alguns minutos, você já consegue fazer orçamentos e entrar em contato com empresas.</p>
         </div>
 
-        <div class="flex flex-col justify-center items-center w-full gap-4 lg:items-start">
-            <div class="flex flex-col justify-center items-center w-full gap-4">
-                <i class="fa-solid fa-user-plus text-6xl text-primary"></i>
-                <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center lg:text-3xl lg:text-left 2xl:text-4xl">Crie sua conta.</h2>
+        <div class="flex flex-col items-center justify-center w-full gap-4 sm:flex-row lg:justify-start lg:gap-16">
+            <div class="flex flex-col items-center justify-center w-full gap-4 lg:w-fit">
+                <i class="text-6xl sm:text-9xl fa-solid fa-user-plus text-primary"></i>
+                <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 sm:hidden">Crie sua conta.</h2>
             </div>
-            <p class="w-full text-center text-dark-650 text-base sm:max-w-lg lg:text-left 2xl:max-w-2xl">Registre-se em nossa plataforma, ganhando acesso à todas as funcionalidades do sistema de forma gratuita.</p>
+            <div class="flex flex-col w-full gap-4">
+                <h2 class="hidden text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 sm:block sm:text-left lg:text-3xl 2xl:text-4xl">Crie sua conta.</h2>
+                <p class="w-full text-base text-center text-dark-650 sm:max-w-lg sm:text-left lg:text-left 2xl:max-w-xl">Registre-se em nossa plataforma, ganhando acesso à todas as funcionalidades do sistema de forma gratuita.</p>
+            </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center w-full gap-4 lg:items-start">
-            <div class="flex flex-col justify-center items-center w-full gap-4">
-                <i class="fa-solid fa-file-pen text-6xl text-primary"></i>
-                <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center lg:text-3xl lg:text-left 2xl:text-4xl">Escreva uma solicitação.</h2>
+        <div class="flex flex-col items-center justify-center w-full gap-4 sm:flex-row lg:justify-end lg:gap-16">
+            <div class="flex flex-col items-center justify-center w-full gap-4 sm:hidden">
+                <i class="text-6xl sm:text-9xl fa-solid fa-file-pen text-primary"></i>
+                <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 sm:hidden">Escreva uma solicitação.</h2>
             </div>
-            <p class="w-full text-center text-dark-650 text-base sm:max-w-lg lg:text-left 2xl:max-w-2xl">Descreva suas necessidades em um formulário que pode ser enviado para diversas empresas, tornando mais rápido e fácil o contato com elas.</p>
+            <div class="flex flex-col w-full gap-4 lg:items-end">
+                <h2 class="hidden text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 sm:block sm:text-right lg:text-3xl 2xl:text-4xl">Escreva uma solicitação.</h2>
+                <p class="w-full text-base text-center text-dark-650 sm:max-w-lg sm:text-right 2xl:max-w-xl">Descreva suas necessidades em um formulário que pode ser enviado para diversas empresas, tornando mais rápido e fácil o contato com elas.</p>
+            </div>
+            <div class="flex-col items-center justify-center hidden w-full gap-4 sm:flex lg:w-fit">
+                <i class="text-9xl fa-solid fa-file-pen text-primary"></i>
+            </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center w-full gap-4 lg:items-start">
-            <div class="flex flex-col justify-center items-center w-full gap-4">
-                <i class="fa-solid fa-paper-plane text-6xl text-primary"></i>
-                <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center lg:text-3xl lg:text-left 2xl:text-4xl">Contate empresas.</h2>
+        <div class="flex flex-col items-center justify-center w-full gap-4 sm:flex-row lg:justify-start lg:gap-16">
+            <div class="flex flex-col items-center justify-center w-full gap-4 lg:w-fit">
+                <i class="text-6xl sm:text-9xl fa-solid fa-paper-plane text-primary"></i>
+                <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 sm:hidden">Contate empresas.</h2>
             </div>
-            <p class="w-full text-center text-dark-650 text-base sm:max-w-lg lg:text-left 2xl:max-w-2xl">Conecte-se com provedores por sua conta, ou permita-nos conectá-los com você automaticamente.</p>
+            <div class="flex flex-col w-full gap-4">
+                <h2 class="hidden text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 sm:block sm:text-left lg:text-3xl 2xl:text-4xl">Contate empresas.</h2>
+                <p class="w-full text-base text-center text-dark-650 sm:max-w-lg sm:text-left lg:text-left 2xl:max-w-xl">Conecte-se com provedores por sua conta, ou permita-nos conectá-los com você automaticamente.</p>
+            </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center w-full gap-4 lg:items-start">
-            <div class="flex flex-col justify-center items-center w-full gap-4">
-                <i class="fa-solid fa-gears text-6xl text-primary"></i>
-                <h2 class="font-extrabold font-sans-extrabold text-dark-900 text-2xl text-center lg:text-3xl lg:text-left 2xl:text-4xl">Instale seu sistema.</h2>
+        <div class="flex flex-col items-center justify-center w-full gap-4 sm:flex-row lg:justify-end lg:gap-16">
+            <div class="flex flex-col items-center justify-center w-full gap-4 sm:hidden">
+                <i class="text-6xl sm:text-9xl fa-solid fa-gears text-primary"></i>
+                <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 sm:hidden">Instale seu sistema.</h2>
             </div>
-            <p class="w-full text-center text-dark-650 text-base sm:max-w-lg lg:text-left 2xl:max-w-2xl">Acompanhe a instalação pela plataforma e avalie a empresa após a finalização do serviço.</p>
+            <div class="flex flex-col w-full gap-4 lg:items-end">
+                <h2 class="hidden text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 sm:block sm:text-right lg:text-3xl 2xl:text-4xl">Instale seu sistema.</h2>
+                <p class="w-full text-base text-center text-dark-650 sm:max-w-lg sm:text-right 2xl:max-w-xl">Acompanhe a instalação pela plataforma e avalie a empresa após a finalização do serviço.</p>
+            </div>
+            <div class="flex-col items-center justify-center hidden w-full gap-4 sm:flex lg:w-fit">
+                <i class="text-9xl fa-solid fa-gears text-primary"></i>
+            </div>
         </div>
     </div>
 </main>
 
-<footer class="mt-8">
+<footer class="mt-8 lg:mt-24">
     <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <defs>
@@ -229,41 +247,95 @@
         </g>
     </svg>
 
-    <div class="flex flex-col items-center w-full p-4 bg-primary">
-        <div class="flex flex-col w-full items-center gap-8">
-            <div class="flex flex-col items-center w-full gap-4">
-                <img src="assets/logos/logo-white.png" alt="Logo da Voltaic" class="w-1/2">
-                <button class="text-white underline text-center">Política de privacidade.</button>
+    <div class="flex flex-col items-center w-full gap-16 p-4 bg-primary lg:p-16">
+        <div class="flex flex-col items-center w-full gap-8 lg:flex-row lg:justify-between lg:items-stretch">
+            <div class="flex flex-col items-center w-full gap-4 lg:w-full lg:justify-center">
+                <img src="assets/logos/logo-white.png" alt="Logo da Voltaic" class="w-1/2 sm:w-64">
+                <button class="text-center text-white underline">Política de privacidade.</button>
             </div>
 
-
-            <div class="flex flex-col w-full gap-2">
-                <div class="flex justify-between items-center w-full gap-4 text-white text-xl font-semibold cursor-pointer" (click)="openDropdown('explore')">
+            <div class="flex flex-col w-full gap-2 max-w-[32rem] lg:hidden">
+                <div class="flex items-center justify-between w-full gap-4 text-lg text-white cursor-pointer" (click)="openDropdown('explore')">
                     Explore agora
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="w-full bg-white h-0.5 opacity-50 rounded-full"></div>
-                <div class="hidden flex-col w-full gap-2 transition-all" id="explore">
-                    <a class="flex justify-between items-center w-full text-white text-lg bg-white bg-opacity-10 p-2 rounded-md cursor-pointer">
+                <div class="flex-col hidden w-full gap-2" id="explore">
+                    <a class="flex items-center w-full gap-4 p-2 text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-solid fa-right-to-bracket"></i>
                         Entrar
                     </a>
-                    <a class="flex justify-between items-center w-full text-white text-lg bg-white bg-opacity-10 p-2 rounded-md cursor-pointer">
+                    <a class="flex items-center w-full gap-4 p-2 text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-solid fa-user"></i>
                         Cadastrar-se
                     </a>
                 </div>
             </div>
 
-            <div class="flex flex-col w-full gap-2">
-                <div class="flex justify-between items-center w-full gap-4 text-white text-xl font-semibold cursor-pointer" (click)="openDropdown('contact')">
-                    Contate-nos
+            <div class="flex flex-col w-full gap-2 max-w-[32rem] lg:hidden">
+                <div class="flex items-center justify-between w-full gap-4 text-lg text-white cursor-pointer" (click)="openDropdown('media')">
+                    Redes sociais
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="w-full bg-white h-0.5 opacity-50 rounded-full"></div>
-                <div class="hidden flex-col w-full gap-2 transition-all" id="contact">
-                    <a class="w-full text-white text-lg bg-white bg-opacity-10 p-2 rounded-md cursor-pointer">Entrar</a>
-                    <a class="w-full text-white text-lg bg-white bg-opacity-10 p-2 rounded-md cursor-pointer">Cadastrar-se</a>
+                <div class="flex-col hidden w-full gap-2" id="media">
+                    <div class="flex items-center w-full gap-2 p-2 text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        Voltaic Technology
+                    </div>
+                    <div class="flex items-center w-full gap-2 p-2 text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-brands fa-square-instagram"></i>
+                        @voltaic.technology
+                    </div>
+                    <a target="_blank" href="https://github.com/massoladb/voltaic" class="flex items-center w-full gap-2 p-2 text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-brands fa-square-github"></i>
+                        massoladb/voltaic
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex-col items-center hidden w-full gap-6 lg:flex">
+                <div class="flex flex-col items-center">
+                    <p class="text-xl text-white">Explore agora.</p>
+                    <div class="w-full h-0.5 bg-white rounded-full opacity-50"></div>
+                </div>
+                <div class="flex flex-col items-center w-full gap-2">
+                    <a class="flex items-center w-full gap-4 p-2 text-lg text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        Entrar
+                    </a>
+                    <a class="flex items-center w-full gap-4 p-2 text-lg text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-solid fa-user"></i>
+                        Cadastrar-se
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex-col items-center hidden w-full gap-6 lg:flex">
+                <div class="flex flex-col items-center">
+                    <p class="text-xl text-white">Redes sociais.</p>
+                    <div class="w-full h-0.5 bg-white rounded-full opacity-50"></div>
+                </div>
+                <div class="flex flex-col items-center w-full gap-2">
+                    <div class="flex items-center w-full gap-4 p-2 text-lg text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        Voltaic Technology
+                    </div>
+                    <div class="flex items-center w-full gap-4 p-2 text-lg text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-brands fa-square-instagram"></i>
+                        @voltaic.technology
+                    </div>
+                    <a target="_blank" href="https://github.com/massoladb/voltaic" class="flex items-center w-full gap-4 p-2 text-lg text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
+                        <i class="fa-brands fa-square-github"></i>
+                        massoladb/voltaic
+                    </a>
                 </div>
             </div>
         </div>
+        <p class="text-sm text-center text-white">© Voltaic 2023.</p>
     </div>
 </footer>
+
+<div class="fixed flex items-center justify-center w-12 text-3xl text-white rounded-full cursor-pointer aspect-square bg-primary bottom-6 right-6 hover:bg-primary-100" id="back-to-top-button" (click)="backToTop()">
+    <i class="fa-solid fa-arrow-up"></i>
+</div>

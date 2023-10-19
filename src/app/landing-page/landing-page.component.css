@@ -1,9 +1,9 @@
 .menu-bar {
-    @apply w-10 h-1.5 transition-transform bg-dark-800 rounded-full;
+    @apply w-10 h-1.5 bg-dark-800 rounded-full;
 }
 
 .menu-open-top {
-    @apply rotate-45 absolute;
+    @apply absolute rotate-45;
 }
 
 .menu-open-middle {
@@ -11,7 +11,7 @@
 }
 
 .menu-open-bottom {
-    @apply -rotate-45 absolute;
+    @apply absolute -rotate-45;
 }
 
 .menu-open {
