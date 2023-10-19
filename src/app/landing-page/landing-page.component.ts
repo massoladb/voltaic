@@ -68,11 +68,19 @@ export class LandingPageComponent {
     }
   }
 
-  // goes back to the top of the page
-  backToTop(): void {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  // scrolls to the y coordinate passed
+  scrollTo(section: string): void {
+    if (section === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element: HTMLElement = document.getElementById(section) as HTMLElement;
+      const elementPos: DOMRect = element.getBoundingClientRect();
+
+      window.scrollTo({ top: elementPos.top - 150, behavior: 'smooth' })
+    }
   }
 
+  // shows the back to top button
   @HostListener('window:scroll', ['$event'])
   showBackToTopButton(event: any): void {
     const button: HTMLElement = document.getElementById('back-to-top-button') as HTMLElement;

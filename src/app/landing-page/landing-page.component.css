@@ -15,7 +15,7 @@
 }
 
 .menu-open {
-    @apply justify-center;
+    @apply justify-center fixed top-4 right-4;
 }
 
 .menu-open-sidebar {

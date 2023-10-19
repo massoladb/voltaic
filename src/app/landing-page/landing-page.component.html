@@ -12,34 +12,34 @@
 
         <div class="fixed top-0 right-0 flex flex-col flex-wrap items-center justify-start h-screen gap-5 pt-20 pb-4 pl-4 pr-4 bg-white shadow-2xl w-60 translate-x-60 lg:hidden"
             id="sidebar">
-            <a class="flex items-center justify-center w-full p-2 h-fit semibold-text">
+            <p class="flex items-center justify-center w-full p-2 h-fit semibold-text hover:scale-105" (click)="scrollTo('about')">
                 Sobre nós
-            </a>
-            <a class="flex items-center justify-center w-full p-2 h-fit semibold-text">
+            </p>
+            <p class="flex items-center justify-center w-full p-2 h-fit semibold-text hover:scale-105" (click)="scrollTo('benefits')">
                 Benefícios
-            </a>
-            <a class="flex items-center justify-center w-full p-2 h-fit semibold-text">
+            </p>
+            <p class="flex items-center justify-center w-full p-2 h-fit semibold-text hover:scale-105" (click)="scrollTo('steps')">
                 Primeiros passos
-            </a>
-            <a
-                class="flex items-center justify-center w-full p-2 rounded-md cursor-pointer h-fit semibold-text bg-dark-50">
+            </p>
+            <p
+                class="flex items-center justify-center w-full p-2 rounded-md cursor-pointer h-fit semibold-text bg-dark-50 hover:scale-105">
                 Entrar
-            </a>
+            </p>
             <button
-                class="flex items-center justify-center w-full gap-4 p-2 text-xl text-white rounded-md cursor-pointer h-fit bg-primary hover:bg-primary-100">
+                class="flex items-center justify-center w-full gap-4 p-2 text-xl text-white rounded-md cursor-pointer h-fit bg-primary hover:bg-primary-100 hover:scale-105">
                 Cadastre-se
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
 
         <div class="items-center hidden h-full gap-5 lg:flex">
-            <a class="cursor-pointer semibold-text">Sobre nós</a>
-            <a class="cursor-pointer semibold-text">Benefícios</a>
-            <a class="cursor-pointer semibold-text">Primeiros passos</a>
+            <p class="cursor-pointer semibold-text hover:scale-105" (click)="scrollTo('about')">Sobre nós</p>
+            <p class="cursor-pointer semibold-text hover:scale-105" (click)="scrollTo('benefits')">Benefícios</p>
+            <p class="cursor-pointer semibold-text hover:scale-105" (click)="scrollTo('steps')">Primeiros passos</p>
             <div class="h-8 w-[4px] bg-dark-150 rounded-full"></div>
-            <a class="cursor-pointer semibold-text">Entrar</a>
+            <p class="cursor-pointer semibold-text hover:scale-105">Entrar</p>
             <button
-                class="flex items-center justify-center gap-4 p-2 pl-4 pr-4 text-xl text-white rounded-md cursor-pointer bg-primary hover:bg-primary-100">
+                class="flex items-center justify-center gap-4 p-2 pl-4 pr-4 text-xl text-white rounded-md cursor-pointer bg-primary hover:bg-primary-100 hover:scale-105">
                 Cadastre-se
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
@@ -58,12 +58,12 @@
                 conta de luz contribuindo com o meio ambiente.</p>
             <div class="flex flex-wrap items-center justify-between w-full gap-4">
                 <button
-                    class="flex flex-1 flex-shrink-0 basis-[fit-content] justify-center items-center h-fit text-lg p-2 text-white bg-primary rounded-md cursor-pointer gap-4 hover:bg-primary-100">
+                    class="flex flex-1 flex-shrink-0 basis-[fit-content] justify-center items-center h-fit text-lg p-2 text-white bg-primary rounded-md cursor-pointer gap-4 hover:bg-primary-100 hover:scale-105">
                     Economizar agora
                     <i class="fa-solid fa-right-to-bracket"></i>
                 </button>
                 <button
-                    class="flex flex-1 flex-shrink-0 basis-[fit-content] justify-center items-center h-fit text-lg p-2 text-white bg-secondary rounded-md cursor-pointer gap-4 sm:bg-transparent sm:rounded-none sm:text-dark-900 sm:underline sm:after:content-['.'] sm:gap-0 sm:p-0 sm:flex-none hover:bg-secondary-100 sm:hover:bg-transparent">
+                    class="flex flex-1 flex-shrink-0 basis-[fit-content] justify-center items-center h-fit text-lg p-2 text-white bg-secondary rounded-md cursor-pointer gap-4 sm:bg-transparent sm:rounded-none sm:text-dark-900 sm:underline sm:after:content-['.'] sm:gap-0 sm:p-0 sm:flex-none hover:bg-secondary-100 sm:hover:bg-transparent hover:scale-105">
                     Já possuo uma conta
                     <i class="fa-solid fa-user sm:hidden"></i>
                 </button>
@@ -81,7 +81,7 @@
         <div class="flex w-full lg:gap-8">
             <div class="flex flex-col items-center justify-center w-full gap-4 lg:items-start lg:w-3/5">
                 <div class="flex flex-col items-center justify-center w-full lg:items-start">
-                    <h3 class="text-lg font-bold text-center text-primary lg:text-left">Sobre nós</h3>
+                    <h3 class="text-lg font-bold text-center text-primary lg:text-left" id="about">Sobre nós</h3>
                     <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 lg:text-3xl lg:text-left 2xl:text-4xl">Quem somos?</h2>
                 </div>
                 <p class="w-full text-base text-center text-dark-650 sm:max-w-lg lg:text-left 2xl:max-w-2xl">A Voltaic é uma empresa que visa ampliar o mercado brasileiro de energia solar, conectando usuários de todo o Brasil com empresas que fazem a instalação ou manutenção dos equipamentos necessários para você começar a economizar ao mesmo tempo que ajuda o planeta.</p>
@@ -108,7 +108,7 @@
 
         <div class="flex flex-col items-center justify-center w-full gap-4 lg:items-start">
             <div class="flex flex-col items-center justify-center w-full lg:items-start">
-                <h3 class="text-lg font-bold text-center text-primary lg:text-left">Benefícios</h3>
+                <h3 class="text-lg font-bold text-center text-primary lg:text-left" id="benefits">Benefícios</h3>
                 <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 lg:text-3xl lg:text-left 2xl:text-4xl">Seu investimento gera resultado.</h2>
             </div>
             <p class="w-full text-base text-center text-dark-650 sm:max-w-lg lg:text-left 2xl:max-w-2xl">A instalação de um sistema de energia fotovoltaica em seu imóvel garante diversos benefícios.</p>
@@ -175,7 +175,7 @@
 
         <div class="flex flex-col items-center justify-center w-full gap-4 lg:items-start">
             <div class="flex flex-col items-center justify-center w-full lg:items-start">
-                <h3 class="text-lg font-bold text-center text-primary lg:text-left">Primeiros passos</h3>
+                <h3 class="text-lg font-bold text-center text-primary lg:text-left" id="steps">Primeiros passos</h3>
                 <h2 class="text-2xl font-extrabold text-center font-sans-extrabold text-dark-900 lg:text-3xl lg:text-left 2xl:text-4xl">Faça seu orçamento em poucas etapas.</h2>
             </div>
             <p class="w-full text-base text-center text-dark-650 sm:max-w-lg lg:text-left 2xl:max-w-2xl">Utilizando nossa plataforma, em apenas alguns minutos, você já consegue fazer orçamentos e entrar em contato com empresas.</p>
@@ -280,15 +280,15 @@
                 <div class="w-full bg-white h-0.5 opacity-50 rounded-full"></div>
                 <div class="flex-col hidden w-full gap-2" id="media">
                     <div class="flex items-center w-full gap-2 p-2 text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
-                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-facebook"></i>
                         Voltaic Technology
                     </div>
                     <div class="flex items-center w-full gap-2 p-2 text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
-                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="fa-brands fa-instagram"></i>
                         @voltaic.technology
                     </div>
                     <a target="_blank" href="https://github.com/massoladb/voltaic" class="flex items-center w-full gap-2 p-2 text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
-                        <i class="fa-brands fa-square-github"></i>
+                        <i class="fa-brands fa-github"></i>
                         massoladb/voltaic
                     </a>
                 </div>
@@ -318,15 +318,15 @@
                 </div>
                 <div class="flex flex-col items-center w-full gap-2">
                     <div class="flex items-center w-full gap-4 p-2 text-lg text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
-                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-facebook"></i>
                         Voltaic Technology
                     </div>
                     <div class="flex items-center w-full gap-4 p-2 text-lg text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
-                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="fa-brands fa-instagram"></i>
                         @voltaic.technology
                     </div>
                     <a target="_blank" href="https://github.com/massoladb/voltaic" class="flex items-center w-full gap-4 p-2 text-lg text-white bg-white rounded-md cursor-pointer bg-opacity-10 hover:scale-105">
-                        <i class="fa-brands fa-square-github"></i>
+                        <i class="fa-brands fa-github"></i>
                         massoladb/voltaic
                     </a>
                 </div>
@@ -336,6 +336,6 @@
     </div>
 </footer>
 
-<div class="fixed flex items-center justify-center w-12 text-3xl text-white rounded-full cursor-pointer aspect-square bg-primary bottom-6 right-6 hover:bg-primary-100" id="back-to-top-button" (click)="backToTop()">
+<div class="fixed flex items-center justify-center w-12 text-3xl text-white rounded-full cursor-pointer aspect-square bg-primary bottom-6 right-6 hover:bg-primary-100" id="back-to-top-button" (click)="scrollTo('top')">
     <i class="fa-solid fa-arrow-up"></i>
 </div>
